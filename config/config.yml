@@ -1,0 +1,14 @@
+db_config:
+  host: 127.0.0.1
+  user: root
+  password: root
+  prot: 3306
+redis_config:
+  host: 127.0.0.1
+  auth: ~
+master_pid: ~
+worker_num: ~
+daemon: false
+log_path: ~
+user_name: ~
+password: ~

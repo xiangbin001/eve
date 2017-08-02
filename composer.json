@@ -1,7 +1,16 @@
 {
+  "name":"eve_composer",
+  "description":"this is eve_composer",
   "require": {
     "php": ">=7.0.0",
-    "illuminate/database": "*"
+    "illuminate/database": "*",
+    "guzzlehttp/guzzle": "~6.0",
+    "guzzlehttp/psr7": "*",
+    "guzzlehttp/promises":"*",
+    "symfony/yaml":"*",
+    "symfony/browser-kit": "*",
+    "symfony/dom-crawler": "*",
+    "thiagoalessio/tesseract_ocr": "^1.1"
   },
   "repositories": {
     "packagist": {

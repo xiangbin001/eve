@@ -1,0 +1,6 @@
+#请不要忘记最后面的 / 符号
+abundle\: app/controller/abundle/
+service\: app/service/
+src\: app/src/
+middleware\: app/middleware/
+app\: app/

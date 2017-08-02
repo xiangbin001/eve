@@ -5,7 +5,7 @@ class Di
 {
     public $pool = [];
 
-    public $config = [];
+    public static $config = [];
 
     public $argv = '';
 
@@ -23,7 +23,7 @@ class Di
 
     public function setConfig($config)
     {
-        $this->config = $config;
+        self::$config = $config;
     }
 
     public function set(string $name, $obj)

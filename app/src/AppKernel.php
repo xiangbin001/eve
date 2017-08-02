@@ -8,7 +8,7 @@ class AppKernel implements KernelInterface
 {
     public function runAll()
     {
-        // self::checkVersion();
+        self::checkVersion();
         self::checkSapi();
         self::installDispatcher();
         self::parseCommand();

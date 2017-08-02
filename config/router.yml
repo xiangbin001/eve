@@ -1,0 +1,16 @@
+#路由配置,middleware可以不加
+/:
+  namespace: abundle
+  controller: index
+  action : index
+  middleware: Pre@sss
+/curl:
+  namespace: abundle
+  controller: index
+  action : curl
+  middleware: ~
+/index:
+  namespace: bbundle
+  controller: index
+  action : index
+  middleware: ~
