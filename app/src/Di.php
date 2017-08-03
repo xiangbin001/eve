@@ -5,7 +5,7 @@ class Di
 {
     public $pool = [];
 
-    public static $config = [];
+    public $config = [];
 
     public $argv = '';
 
@@ -13,7 +13,6 @@ class Di
     {
         $this->setCommand($argv);
         $this->setConfig($config);
-
     }
 
     public function setCommand($argv)
@@ -23,7 +22,7 @@ class Di
 
     public function setConfig($config)
     {
-        self::$config = $config;
+        $this->config = $config;
     }
 
     public function set(string $name, $obj)
@@ -33,7 +32,18 @@ class Di
 
     public function get(string $name)
     {
-        return $this->pool[$name];
+        return $this->pool[$name] ?? NULL;
     }
 
+    public function bootCapsule($db_name = 'capsule')
+    {
+        $capsule = $this->get($db_name);
+        if(empty($capsule)) {
+            $capsule = new Capsule();
+            $capsule->addConnection($this->config['db_config']);
+            $capsule->setAsGlobal();
+            $capsule->bootEloquent();
+            $this->set($db_name, $capsule);
+        }
+    }
 }

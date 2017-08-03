@@ -6,6 +6,7 @@ db_config:
 redis_config:
   host: 127.0.0.1
   auth: ~
+  prot: 6379
 master_pid: ~
 worker_num: ~
 daemon: false

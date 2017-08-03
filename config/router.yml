@@ -14,3 +14,13 @@
   controller: index
   action : index
   middleware: ~
+/select:
+  namespace: abundle
+  controller: index
+  action : select
+  middleware: Pre@select
+/scanfFollowing:
+  namespace: abundle
+  controller: index
+  action : scanfFollowing
+  middleware: ~
